@@ -10,7 +10,7 @@ A free, open-source operating system for Product Managers using Claude Code on C
 
 | | |
 |--|--|
-| **13 Skills** | Slash commands for every core PM workflow |
+| **12 Skills** | Slash commands for every core PM workflow |
 | **8 Sub-agents** | Expert review personas on demand |
 | **Context library** | Your product, users, competitors, and docs — loaded once, used everywhere |
 | **Writing style** | Pre-filled PM defaults, fully editable |
@@ -117,7 +117,6 @@ Claude adopts each persona and flags specific blockers, risks, and gaps.
 | Roadmap | `/roadmap` | RICE/ICE prioritization and narratives for team, exec, or customers |
 | Release Notes | `/release-notes` | Customer-facing or internal changelogs from a PRD or feature list |
 | Exec Presentation | `/exec-presentation` | Slide narrative for QBRs, board updates, and roadmap reviews |
-| Customer Docs | `/customer-docs` | Help Center articles calibrated to your product's language |
 
 ---
 
@@ -178,4 +177,4 @@ Write a PRD using @context/company.md and @context/product/knowledge-base.md
 
 MIT — free forever. Fork it, modify it, share it.
 
-Built by [Sevan Anderderian](https://www.linkedin.com/in/sevanderderian/) · [Feedback](https://github.com/derderiansevan/sevans-product-os/issues)
+Built by [Sevan Derderian](https://www.linkedin.com/in/sevanderderian/) · [Feedback](https://github.com/derderiansevan/sevans-product-os/issues)
