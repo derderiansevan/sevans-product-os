@@ -30,7 +30,7 @@ That's it. No coding required.
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/sevanderderian/cursor-for-pms.git
+git clone https://github.com/derderiansevan/sevans-product-os.git
 cd cursor-for-pms
 ```
 
@@ -135,4 +135,4 @@ Say "review as [role]" after generating any document. Claude fully adopts the pe
 
 MIT — free forever. Fork it, modify it, share it.
 
-Built by [Sevan Anderderian](https://www.linkedin.com/in/sevanderderian/) · [Product community](#) · [Feedback](https://github.com/sevanderderian/cursor-for-pms/issues)
+Built by [Sevan Anderderian](https://www.linkedin.com/in/sevanderderian/) · [Product community](#) · [Feedback](https://github.com/derderiansevan/sevans-product-os/issues)
