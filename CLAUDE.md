@@ -45,7 +45,9 @@ Trigger any skill by typing `/skill-name` in Claude Code.
 | PRD Writer | `/prd-writer` | Write PRDs from speclet to full solution review |
 | User Stories | `/user-stories` | Create well-scoped user stories, optionally post to GitHub |
 | Marketing Brief | `/marketing-brief` | Write structured briefs for features and products |
-| User Research | `/user-research` | Synthesize interview transcripts into structured findings |
+| Interview Prep | `/interview-prep` | Write a discussion guide and research questions before a user interview |
+| Interview Summary | `/interview-summary` | Summarize a single interview transcript into a structured, quotable summary |
+| User Research | `/user-research` | Synthesize multiple interviews into ranked findings with confidence levels |
 | Competition Analysis | `/competition-analysis` | Analyze competitors with evidence-based product intelligence |
 | Customer Docs | `/customer-docs` | Write customer-facing documentation for your Help Center |
 | Leadership Report | `/leadership-report` | Write Slack updates for leadership and stakeholders |
@@ -59,6 +61,22 @@ Trigger any skill by typing `/skill-name` in Claude Code.
 - **Notion:** [FILL IN — paste your workspace URL or leave blank]
 - **Linear / Jira:** [FILL IN — project URL or leave blank]
 - **Slack:** [FILL IN — workspace name or leave blank]
+
+---
+
+## Context Library
+
+Shared knowledge files live in `context/`. Reference them with `@context/...` in any prompt.
+
+| File | What it contains |
+|------|-----------------|
+| `@context/company.md` | Company overview, ICP, OKRs, competitive landscape |
+| `@context/competitors/[name].md` | Per-competitor profiles (use `_template.md` to add one) |
+| `@context/product/knowledge-base.md` | Product features, terminology, limitations |
+| `@context/product/prds/` | Drop existing PRDs here for Claude to reference |
+| `@context/meetings/[date-topic].md` | Meeting notes and interview summaries |
+
+See `context/README.md` for usage examples.
 
 ---
 
