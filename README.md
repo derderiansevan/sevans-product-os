@@ -117,6 +117,7 @@ Claude adopts each persona and flags specific blockers, risks, and gaps.
 | Roadmap | `/roadmap` | RICE/ICE prioritization and narratives for team, exec, or customers |
 | Release Notes | `/release-notes` | Customer-facing or internal changelogs from a PRD or feature list |
 | Exec Presentation | `/exec-presentation` | Slide narrative for QBRs, board updates, and roadmap reviews |
+| Internal Slides | `/internal-slides` | Slide decks for team use — sprint reviews, planning kickoffs, design reviews, retrospectives |
 
 ---
 
