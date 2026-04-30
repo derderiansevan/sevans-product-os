@@ -150,48 +150,57 @@
   <div class="container">
     <p class="section-label">Get started</p>
     <h2>First value in under 5 minutes</h2>
-    <p class="section-desc">No coding required. Just Cursor and Claude Code.</p>
+    <p class="section-desc">No coding required. <a href="https://code.claude.com/docs/en/quickstart" target="_blank" style="color:var(--text-muted); text-decoration:underline; text-underline-offset:3px;">Read the official Claude Code quickstart →</a></p>
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
         <div>
-          <h3>Clone the repo</h3>
+          <h3>Install Claude Code &amp; log in</h3>
           <p>Open your terminal and run:</p>
-          <pre>git clone https://github.com/derderiansevan/sevans-product-os.git
-cd cursor-for-pms
-cursor .</pre>
+          <pre>curl -fsSL https://claude.ai/install.sh | bash</pre>
+          <p>Then authenticate:</p>
+          <pre>claude</pre>
         </div>
       </div>
       <div class="step">
         <div class="step-num">2</div>
         <div>
-          <h3>Fill in <code>CLAUDE.md</code></h3>
-          <p>Open <code>CLAUDE.md</code> at the root of the repo. Fill in every <code>[FILL IN]</code> field:</p>
-          <pre><span class="comment"># PM Context</span>
-<span class="key">Role:</span>        <span class="value">Senior PM at Acme Corp</span>
-<span class="key">Product:</span>     <span class="value">B2B SaaS platform for procurement teams</span>
-<span class="key">Target users:</span><span class="value">Legal Ops Managers at mid-market companies</span>
-<span class="key">OKRs:</span>        <span class="value">Grow NRR to 115% / Reduce churn to &lt;8%</span>
-<span class="key">Terminology:</span> <span class="value">"workspace" not "project", "member" not "user"</span></pre>
-          <p>The more specific you are, the better every skill performs.</p>
+          <h3>Clone the repo and open in Cursor</h3>
+          <pre>git clone https://github.com/derderiansevan/sevans-product-os.git
+cd sevans-product-os
+cursor .</pre>
         </div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
         <div>
-          <h3>Run your first skill</h3>
-          <p>In Cursor's chat panel, type a slash command:</p>
-          <pre>/prd-writer</pre>
-          <p>Claude will ask 2–3 clarifying questions, then generate a full PRD — hypothesis-driven, stage-appropriate, with a built-in checklist.</p>
+          <h3>Fill in your context</h3>
+          <p>Open <code>CLAUDE.md</code> and fill in every <code>[FILL IN]</code> field:</p>
+          <pre><span class="comment"># PM Context</span>
+<span class="key">Role:</span>         <span class="value">Senior PM at Acme Corp</span>
+<span class="key">Product:</span>      <span class="value">B2B SaaS for procurement teams</span>
+<span class="key">Target users:</span> <span class="value">Legal Ops Managers, mid-market</span>
+<span class="key">OKRs:</span>         <span class="value">NRR 115% / churn &lt;8%</span>
+<span class="key">Terminology:</span>  <span class="value">"workspace" not "project"</span></pre>
+          <p>Then edit <code>context/writing-style.md</code> to match your voice. The more specific you are, the better every skill performs.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
         <div>
-          <h3>Review with a sub-agent</h3>
-          <p>After generating any document, add:</p>
+          <h3>Run your first skill</h3>
+          <p>In Cursor's chat panel, type a slash command:</p>
+          <pre>/prd-writer</pre>
+          <p>Claude asks 2–3 clarifying questions, then generates a full PRD — hypothesis-driven, stage-appropriate, with a built-in checklist.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div>
+          <h3>Get expert review</h3>
+          <p>After generating any document:</p>
           <pre>Review this as an Engineer and a Skeptic.</pre>
-          <p>Claude adopts each persona's lens and flags specific blockers, risks, and gaps — not generic feedback.</p>
+          <p>Claude adopts each persona and flags specific blockers, risks, and gaps.</p>
         </div>
       </div>
     </div>

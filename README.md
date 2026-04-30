@@ -37,7 +37,7 @@ PM OS changes the starting point:
 ## Prerequisites
 
 - [Cursor](https://cursor.sh) — the AI code editor
-- [Claude Code](https://claude.ai/code) — install with `npm install -g @anthropic-ai/claude-code`
+- [Claude Code](https://code.claude.com/docs/en/quickstart) — Anthropic's official CLI
 
 No coding required.
 
@@ -45,7 +45,19 @@ No coding required.
 
 ## Get started in 5 minutes
 
-### 1. Clone the repo
+### 1. Install Claude Code and log in
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+Then authenticate:
+
+```bash
+claude
+```
+
+### 2. Clone the repo
 
 ```bash
 git clone https://github.com/derderiansevan/sevans-product-os.git
@@ -53,7 +65,7 @@ cd sevans-product-os
 cursor .
 ```
 
-### 2. Fill in your context
+### 3. Fill in your context
 
 Open `CLAUDE.md` and fill in every `[FILL IN]` field:
 
@@ -65,11 +77,7 @@ OKRs:         Grow NRR to 115% / Reduce churn to <8%
 Terminology:  "workspace" not "project", "member" not "user"
 ```
 
-Then open `context/writing-style.md` — it's pre-filled with PM defaults. Edit to match your voice.
-
-### 3. Add your product context
-
-Fill in `context/company.md` and `context/product/knowledge-base.md`. Drop existing PRDs into `context/product/prds/`. The more context you add, the better every skill performs.
+Then open `context/writing-style.md` — pre-filled with PM defaults, edit to match your voice. Fill in `context/company.md` and `context/product/knowledge-base.md` for richer output.
 
 ### 4. Run your first skill
 
