@@ -8,6 +8,7 @@ This folder is your shared knowledge base. Fill it in once — Claude reads it a
 
 ```
 context/
+├── writing-style.md        ← Voice, tone by audience, banned words, document-specific rules
 ├── company.md              ← Company overview, ICP, OKRs, positioning, competitive landscape
 ├── competitors/
 │   ├── _template.md        ← Copy this to add a new competitor profile
@@ -44,7 +45,8 @@ Summarize the key decisions from @context/meetings/2024-04-15-roadmap-review.md
 
 ## Filling priority order
 
-1. **`company.md`** — fills in the strategic context behind every skill output
+1. **`writing-style.md`** — already pre-filled with PM defaults, edit to match your voice
+2. **`company.md`** — fills in the strategic context behind every skill output
 2. **`product/knowledge-base.md`** — makes customer docs and PRDs accurate
 3. **`competitors/`** — one file per main competitor, use `_template.md`
 4. **`product/prds/`** — drop in your most important existing PRDs

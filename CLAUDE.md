@@ -17,11 +17,12 @@
 
 ## Writing Rules
 
-- Direct, concise, active voice. No filler.
+Default style is defined in `@context/writing-style.md` — edit that file to customize your voice, tone, and banned words.
+
+Core rules (always apply regardless of style):
 - Lead with the recommendation, then context.
-- Audience-match: casual for Slack, structured for docs, precise for specs.
-- Banned words: delve, landscape, synergy, leverage, robust, streamline, cutting-edge, seamless, powerful, intuitive.
 - Never fabricate data, quotes, or metrics. Use `[NEED: data from X]` for gaps.
+- Match length to purpose: Slack update ≠ PRD ≠ exec email.
 
 ---
 
@@ -73,6 +74,7 @@ Shared knowledge files live in `context/`. Reference them with `@context/...` in
 
 | File | What it contains |
 |------|-----------------|
+| `@context/writing-style.md` | Voice, tone, banned words, and document-specific rules |
 | `@context/company.md` | Company overview, ICP, OKRs, competitive landscape |
 | `@context/competitors/[name].md` | Per-competitor profiles (use `_template.md` to add one) |
 | `@context/product/knowledge-base.md` | Product features, terminology, limitations |
