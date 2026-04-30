@@ -1,27 +1,45 @@
-# PM OS for Claude Code
+# PM OS — Claude Code for Product Managers
 
-A free operating system for Product Managers using Claude Code on Cursor. Seven skills, eight sub-agent personas, and a context system that makes Claude work the way you think.
+A free, open-source operating system for Product Managers using Claude Code on Cursor. Set it up once. Claude knows your product, your users, your writing style, and your standards — permanently.
 
-**[→ See the full guide and skill reference](https://sevanderderian.github.io/cursor-for-pms)**
+**[→ Full guide and skill reference](https://derderiansevan.github.io/sevans-product-os)**
 
 ---
 
 ## What's inside
 
-| What | Description |
-|------|-------------|
-| **7 Skills** | `/prd-writer`, `/user-stories`, `/marketing-brief`, `/user-research`, `/competition-analysis`, `/customer-docs`, `/leadership-report` |
-| **8 Sub-agents** | Engineer, Designer, Executive, Skeptic, Customer, Data Analyst, CPO, Marketing Director |
-| **Context system** | One `CLAUDE.md` file where you describe your role, product, users, and writing style |
+| | |
+|--|--|
+| **13 Skills** | Slash commands for every core PM workflow |
+| **8 Sub-agents** | Expert review personas on demand |
+| **Context library** | Your product, users, competitors, and docs — loaded once, used everywhere |
+| **Writing style** | Pre-filled PM defaults, fully editable |
+
+---
+
+## Why this exists
+
+Most PMs use Claude like a search engine. They get generic output, spend an hour fixing it, and re-explain their context in the next chat.
+
+PM OS changes the starting point:
+
+| Task | Without PM OS | With PM OS |
+|------|--------------|------------|
+| **PRD** | Generic doc, made-up metrics, no customer evidence | Hypothesis-driven, evidence-backed, stage-appropriate — in minutes |
+| **User stories** | Vague, untestable, no acceptance criteria | INVEST-compliant with Given/When/Then, posted to GitHub if needed |
+| **Leadership report** | 30 min from scratch every Friday | 2 min with `/leadership-report` — status, wins, risks, ask |
+| **Customer docs** | Wrong terminology, marketing-speak | Matches your UI language, functional, Help Center-ready |
+| **Marketing brief** | Feature-first, generic personas | Customer pain first, real competitors named, 3 positioning statements |
+| **Customer feedback** | Transcripts skimmed, signals lost | Structured findings with exact quotes, confidence levels, implications |
 
 ---
 
 ## Prerequisites
 
 - [Cursor](https://cursor.sh) — the AI code editor
-- [Claude Code](https://claude.ai/code) — Anthropic's CLI (install: `npm install -g @anthropic-ai/claude-code`)
+- [Claude Code](https://claude.ai/code) — install with `npm install -g @anthropic-ai/claude-code`
 
-That's it. No coding required.
+No coding required.
 
 ---
 
@@ -31,80 +49,73 @@ That's it. No coding required.
 
 ```bash
 git clone https://github.com/derderiansevan/sevans-product-os.git
-cd cursor-for-pms
-```
-
-### 2. Open in Cursor
-
-```bash
+cd sevans-product-os
 cursor .
 ```
 
-### 3. Fill in your context
+### 2. Fill in your context
 
 Open `CLAUDE.md` and fill in every `[FILL IN]` field:
 
-```md
-- Role: Senior PM at [Your Company]
-- Product: B2B SaaS platform for [your users]
-- Target users: [specific persona, company size, situation]
-- Primary metric: [the number you own]
-- OKRs: [current cycle objectives]
-- Terminology: [what you call things internally]
+```
+Role:         Senior PM at Acme Corp
+Product:      B2B SaaS platform for procurement teams
+Target users: Legal Ops Managers at mid-market companies
+OKRs:         Grow NRR to 115% / Reduce churn to <8%
+Terminology:  "workspace" not "project", "member" not "user"
 ```
 
-The more specific you are, the better every skill performs. Claude will use this context automatically.
+Then open `context/writing-style.md` — it's pre-filled with PM defaults. Edit to match your voice.
+
+### 3. Add your product context
+
+Fill in `context/company.md` and `context/product/knowledge-base.md`. Drop existing PRDs into `context/product/prds/`. The more context you add, the better every skill performs.
 
 ### 4. Run your first skill
 
-In Cursor's chat panel, type:
+In Cursor's chat panel:
 
 ```
 /prd-writer
 ```
 
-Claude will ask 2-3 clarifying questions, then generate a full PRD — stage-appropriate, hypothesis-driven, with a built-in checklist.
+Claude asks 2–3 clarifying questions, then generates a full PRD — hypothesis-driven, stage-appropriate, with a built-in checklist.
 
-### 5. Review with a sub-agent
+### 5. Get expert review
 
-After generating any document, add:
+After generating any document:
 
 ```
 Review this as an Engineer and a Skeptic.
 ```
 
-Claude adopts each persona's lens and flags specific gaps, blockers, and risks.
+Claude adopts each persona and flags specific blockers, risks, and gaps.
 
 ---
 
-## Skills reference
+## Skills
 
-### `/prd-writer`
-Writes PRDs from a one-line speclet to a full solution review. Adapts to your stage (Team Kickoff → Planning Review → Solution Review → Launch Readiness). Asks 2-3 clarifying questions first. Includes hypothesis, problem evidence, success metrics with baselines, non-goals, and rollout plan.
-
-### `/user-stories`
-Creates INVEST-compliant user stories with Given/When/Then acceptance criteria. Handles a single feature or decomposes a full product brief into a batch. Optionally posts directly to any GitHub repo via the `gh` CLI.
-
-### `/marketing-brief`
-Writes structured briefs for your marketing team: problem statement with customer voice, solution explanation, personas, capabilities, competitive positioning, objection handling, and key numbers. Designed for someone who will be selling the feature.
-
-### `/user-research`
-Synthesizes interview transcripts or research notes into structured findings. Ranks by evidence strength, includes confidence levels (High/Med/Low), distinguishes what participants *said* vs. *did*, and ends with prioritized product implications.
-
-### `/competition-analysis`
-Produces evidence-based competitor profiles: what they built, three smart decisions, three gaps, and a table of implications (copy / avoid / differentiate). Uses real data from product pages, review sites, and job postings — not opinions.
-
-### `/customer-docs`
-Writes customer-facing Help Center articles. Functional, direct, no marketing language. Covers feature explanations, step-by-step guides, and limitation callouts. Adapts length to topic complexity (100–600 words).
-
-### `/leadership-report`
-Writes structured Slack updates for leadership and stakeholders. Format: status, wins, risks/blockers, next week's focus, asks. Skimmable, specific, and appropriately brief for async reading.
+| Skill | Command | What it produces |
+|-------|---------|-----------------|
+| PRD Writer | `/prd-writer` | Hypothesis-driven PRDs from speclet to solution review |
+| User Stories | `/user-stories` | INVEST-compliant stories with acceptance criteria, optional GitHub post |
+| Marketing Brief | `/marketing-brief` | Pain-first briefs with personas, positioning, and objection handling |
+| Interview Prep | `/interview-prep` | Discussion guides with open-ended questions and a hypothesis to challenge |
+| Interview Summary | `/interview-summary` | Structured transcript summary with exact quotes and product implications |
+| User Research | `/user-research` | Findings from multiple interviews ranked by evidence strength |
+| Competition Analysis | `/competition-analysis` | Evidence-based competitor profiles with copy/avoid/differentiate implications |
+| Customer Docs | `/customer-docs` | Help Center articles — functional, direct, no marketing language |
+| Leadership Report | `/leadership-report` | Slack updates: status, wins, risks, next steps, ask |
+| Roadmap | `/roadmap` | RICE/ICE prioritization and narratives for team, exec, or customers |
+| Release Notes | `/release-notes` | Customer-facing or internal changelogs from a PRD or feature list |
+| Exec Presentation | `/exec-presentation` | Slide narrative for QBRs, board updates, and roadmap reviews |
+| Customer Docs | `/customer-docs` | Help Center articles calibrated to your product's language |
 
 ---
 
 ## Sub-agents
 
-Say "review as [role]" after generating any document. Claude fully adopts the persona.
+Say `review as [role]` after any output. Claude fully adopts the persona.
 
 | Role | Lens |
 |------|------|
@@ -119,15 +130,39 @@ Say "review as [role]" after generating any document. Claude fully adopts the pe
 
 ---
 
+## Context library
+
+```
+context/
+├── writing-style.md          ← Voice, tone by audience, banned words — pre-filled, editable
+├── company.md                ← Company overview, ICP, OKRs, competitive landscape
+├── competitors/
+│   ├── _template.md          ← Copy to add a competitor profile
+│   └── [competitor].md
+├── product/
+│   ├── knowledge-base.md     ← Features, terminology, limitations
+│   └── prds/                 ← Drop existing PRDs here
+└── meetings/
+    ├── _template.md          ← General meeting notes
+    └── [YYYY-MM-DD-topic].md
+```
+
+Reference any file in a prompt with `@context/...`:
+```
+Write a PRD using @context/company.md and @context/product/knowledge-base.md
+```
+
+---
+
 ## Customization
 
-**Add your own terminology** — Edit the `Terminology` field in `CLAUDE.md`. Claude will use your product's language everywhere.
+**Edit a skill** — Skills live in `.claude/skills/[name]/SKILL.md`. They're plain markdown — open and edit freely.
 
-**Connect your tools** — Uncomment the MCP connections in `CLAUDE.md` for Notion, Linear/Jira, or Slack. Claude can then pull context from your actual tickets and docs.
+**Add a skill** — Create `.claude/skills/[name]/SKILL.md` and follow the format of any existing skill.
 
-**Modify a skill** — Skills live in `.claude/skills/[skill-name]/SKILL.md`. Open any file and edit the instructions, output format, or checklist to match your team's standards.
+**Edit a sub-agent** — Personas live in `.claude/rules/sub-agents.md`. Add new ones or adjust the lens of existing ones.
 
-**Add a skill** — Create a new folder in `.claude/skills/` with a `SKILL.md` file. Follow the format of any existing skill.
+**Change your writing style** — Edit `context/writing-style.md`. Changes apply to every skill automatically.
 
 ---
 
@@ -135,4 +170,4 @@ Say "review as [role]" after generating any document. Claude fully adopts the pe
 
 MIT — free forever. Fork it, modify it, share it.
 
-Built by [Sevan Anderderian](https://www.linkedin.com/in/sevanderderian/) · [Product community](#) · [Feedback](https://github.com/derderiansevan/sevans-product-os/issues)
+Built by [Sevan Anderderian](https://www.linkedin.com/in/sevanderderian/) · [Feedback](https://github.com/derderiansevan/sevans-product-os/issues)

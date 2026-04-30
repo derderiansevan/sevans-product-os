@@ -29,23 +29,23 @@
 <!-- Hero -->
 <section id="hero">
   <div class="container">
-    <div class="hero-badge"><span class="dot"></span>Free &amp; Open Source</div>
-    <h1>The PM OS for&nbsp;Claude&nbsp;Code</h1>
+    <div class="hero-badge"><span class="dot"></span>Free &amp; Open Source · Built for PMs</div>
+    <h1>Claude Code,<br>built for Product Managers.</h1>
     <p class="hero-sub">
-      Seven skills, eight sub-agent personas, and a context system that makes Claude work the way you think. Write PRDs, user stories, and leadership updates in minutes — not hours.
+      A free operating system for Product Managers using Claude Code. One setup. Your product, your users, your standards — baked in. Every output already calibrated to you.
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="https://github.com/derderiansevan/sevans-product-os" target="_blank">
-        Clone on GitHub
+        Clone on GitHub — it's free
       </a>
       <a class="btn btn-secondary" href="#get-started">
-        How it works →
+        See how it works →
       </a>
     </div>
     <div class="hero-meta">
       <div class="meta-item">
         <span class="meta-label">Skills</span>
-        <span class="meta-value">7</span>
+        <span class="meta-value">13</span>
       </div>
       <div class="meta-item">
         <span class="meta-label">Sub-agents</span>
@@ -63,27 +63,83 @@
   </div>
 </section>
 
+<!-- For PMs who -->
+<section id="why">
+  <div class="container">
+    <p class="section-label">Why this exists</p>
+    <h2>AI is only as good as the context you give it.</h2>
+    <p class="section-desc">Most PMs use Claude like a search engine — paste a question, get a generic answer, spend an hour fixing it. PM OS changes the starting point.</p>
+
+    <div class="before-after-grid">
+
+      <div class="ba-row">
+        <div class="ba-label-row">
+          <span class="ba-tag ba-tag--before">Without PM OS</span>
+          <span class="ba-tag ba-tag--after">With PM OS</span>
+        </div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">PRD</div>
+        <div class="ba-before">"Write a PRD for a bulk export feature." → Claude produces a generic 6-section doc with made-up metrics, no customer evidence, and a success metric of 'increased engagement'.</div>
+        <div class="ba-after"><code>/prd-writer</code> asks who has the problem, what evidence you have, and what stage you're at. Output: hypothesis-driven, evidence-backed, with real baselines — ready to share with your team.</div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">User stories</div>
+        <div class="ba-before">"Write user stories for the settings page." → A list of vague, untestable stories with no acceptance criteria and no connection to user value.</div>
+        <div class="ba-after"><code>/user-stories</code> decomposes your brief into INVEST-compliant stories with Given/When/Then criteria. Optionally posts them directly to your GitHub repo.</div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">Leadership report</div>
+        <div class="ba-before">You write the same Friday update from scratch every week. It takes 30 minutes, sounds slightly different each time, and buries the ask at the bottom.</div>
+        <div class="ba-after"><code>/leadership-report</code> structures it in 2 minutes: status, wins with outcomes, risks with impact, next week, and a specific ask — calibrated to your audience.</div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">Customer docs</div>
+        <div class="ba-before">"Write a help article for our bulk upload feature." → Marketing-speak, wrong terminology, steps that don't match your actual UI, and no mention of limitations.</div>
+        <div class="ba-after"><code>/customer-docs</code> knows your product's terminology and UI language. Output: functional, direct, correctly structured — ready for your Help Center.</div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">Marketing brief</div>
+        <div class="ba-before">"Write a marketing brief for our new AI feature." → Generic positioning, feature-first language, no competitive framing, and personas that fit every B2B SaaS product ever made.</div>
+        <div class="ba-after"><code>/marketing-brief</code> leads with customer pain, names your actual competitors, and gives your marketing team 3 ready-to-use positioning statements and objection responses.</div>
+      </div>
+
+      <div class="ba-row">
+        <div class="ba-topic">Customer feedback</div>
+        <div class="ba-before">You have 8 interview transcripts, a Notion doc of notes, and a meeting this afternoon. You skim them and wing the synthesis. Important signals get lost.</div>
+        <div class="ba-after"><code>/interview-summary</code> structures each transcript: key moments, exact quotes, what surprised you, and product implications. <code>/user-research</code> synthesizes them all into ranked findings with confidence levels.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- What it is -->
 <section id="what">
   <div class="container">
-    <p class="section-label">What it is</p>
-    <h2>Claude, set up to think like a PM</h2>
-    <p class="section-desc">Not a chatbot wrapper. A structured system that gives Claude your context — your product, your users, your writing rules — so every output is already calibrated to you.</p>
+    <p class="section-label">What's inside</p>
+    <h2>Three layers that work together</h2>
+    <p class="section-desc">Not a chatbot wrapper. A structured system built on how PMs actually work.</p>
     <div class="value-grid">
       <div class="value-card">
         <div class="value-icon">⚡</div>
-        <h3>Skills</h3>
-        <p>Slash commands that trigger expert PM workflows. Each skill asks the right questions and produces structured, stage-appropriate output.</p>
+        <h3>13 Skills</h3>
+        <p>Slash commands for every core PM workflow — PRDs, user stories, roadmaps, exec presentations, competitor analysis, and more. Each skill asks the right questions first and produces structured, stage-appropriate output.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">🧠</div>
-        <h3>Sub-agents</h3>
-        <p>Eight expert personas — Engineer, CPO, Skeptic, and more. Say "review as Engineer" and Claude challenges your spec with the precision of a Staff Engineer.</p>
+        <h3>8 Sub-agents</h3>
+        <p>Expert review personas on demand. Say "review as Engineer" and Claude flags missing edge cases. "Review as CPO" and it challenges whether you're solving the right problem at all.</p>
       </div>
       <div class="value-card">
         <div class="value-icon">🗂️</div>
         <h3>Context system</h3>
-        <p>One <code>CLAUDE.md</code> file where you define your role, product, users, and terminology. Every skill reads it. Nothing needs to be repeated.</p>
+        <p>One <code>CLAUDE.md</code> and a <code>context/</code> library where you define your product, users, terminology, competitors, and existing docs. Set it up once. Every skill uses it forever.</p>
       </div>
     </div>
   </div>
