@@ -51,6 +51,9 @@ Trigger any skill by typing `/skill-name` in Claude Code.
 | Competition Analysis | `/competition-analysis` | Analyze competitors with evidence-based product intelligence |
 | Customer Docs | `/customer-docs` | Write customer-facing documentation for your Help Center |
 | Leadership Report | `/leadership-report` | Write Slack updates for leadership and stakeholders |
+| Roadmap | `/roadmap` | Prioritize with RICE/ICE and write roadmap narratives for team, exec, or customers |
+| Release Notes | `/release-notes` | Write customer-facing or internal changelogs from a PRD or feature list |
+| Exec Presentation | `/exec-presentation` | Structure slide narratives for QBRs, board updates, roadmap reviews, and strategy sessions |
 
 ---
 
